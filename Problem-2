@@ -1,0 +1,24 @@
+def player_1(n):
+    print('player 1 takes 1 chocolate')
+    if n != 0:
+        n=n-1
+        print(n)
+        player_2(n)
+    else:
+        print('player 2 wins')
+
+def player_2(n):
+    if n != 0:
+        if n%2==0:
+            n = n-2
+            print('player 2 takes 2 chocolates')
+            return player_1(n)
+        else:
+            n = n-1
+            print('player 2 takes 1 chocolate')
+            return player_1(n)
+    else:
+        print('player 1 wins')
+
+n=int(input('enter number of chocolate:'))
+player_1(n)
