@@ -1,0 +1,75 @@
+#list and its operations
+list1=[1,2,3,4,5]
+list2=[]
+list1.append(5)
+list1.insert(2,8)
+print(list1)
+list1.sort()
+print(list1)
+list1.pop()
+print(list1)
+list1.remove(1)
+print(list1)
+list1.reverse()
+print(list1)
+list2.extend([4,5])
+print(list2)
+list1.index(3)
+print(list1.index(3))
+list2=list1.copy()
+print(list2)
+list1.count(5)
+print(list1.count(5))
+list3=list1 +list2
+print(list3)
+
+##tuple and its operations
+tuple1=(1,3,4,7,6,3,4,9,8)
+tuple2=(2,5,6,7,4)
+tuple1.count(4)
+print(tuple1.count(4))
+tuple3=tuple1 + tuple2
+print(tuple3)
+tuple1.index(4)
+print(tuple1.index(7))
+
+##dictionary and its operations
+dict={'pizza':130, 'burger':90, 'pasta':120, 'fries':70}
+a=dict.copy()
+print(a)
+b=dict.get('pasta')
+print(b)
+c=dict.items()
+print(c)
+e=dict.keys()
+print(e)
+f=dict.pop('burger')
+print(f)
+g=dict.popitem()
+print(g)
+h=dict.setdefault(130)
+print(h)
+i=dict.values()
+print(i)
+j=dict.clear()
+print(j)
+
+#using list, tuple and dictionary together.
+##visiting a store which is the list for shopping which stores dictionary values in the form of tuples and lists. 
+store = [{('womens'):['tops', 'jeans', 'one-piece', 'skirt', 'kurtis'],
+          ('brand'):['roadster', 'puma', 'tokyo talkies', 'spykar']},
+          {('sizes'):['s', 'm', 'l', 'xl', 'xxl'],}]
+
+
+##scenario making:-
+student={'name': 'ojasvi', 'age': 20, 'subjects':('maths', 'science', 'english'), 'marks': (75, 78, 82)},
+{'name': 'nisha', 'age': 21, 'subjects':('maths', 'science', 'english'), 'marks': (76, 60, 80)},
+{'name': 'surbhi', 'age': 20, 'subjects':('maths', 'science', 'english'), 'marks': (80, 72, 85)}
+
+print(student.keys())
+a=input("which student's data do you want:")
+
+if a in student.keys():
+    print(student[a])
+else:
+    print('no student found')
