@@ -1,0 +1,13 @@
+base=int(input('enter base:'))
+exponent=int(input('enter exponent:'))
+
+def power(base, exponent):
+    if exponent == 0:
+        return 1
+    elif exponent == 1:
+        return base
+    elif exponent<0:
+        return 1/base*power(base,(exponent+1))
+    else:
+        return base*power(base,(exponent-1))
+print(power(base,exponent))
